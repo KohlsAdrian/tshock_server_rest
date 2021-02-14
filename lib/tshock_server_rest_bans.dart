@@ -56,7 +56,7 @@ class TShockServerRESTBans {
   Future<Map<String, dynamic>> removeBan(String name) async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
-    final url = '$_baseUrl/bans/destroy?token=$_token&type=name&name=$name';
+    final url = '$_baseUrl/bans/destroy?token=$_token&type=name&ban=$name';
     final response = await get('$url');
     if (response.body != null) {
       String jsonString = utf8.decode(response.bodyBytes);

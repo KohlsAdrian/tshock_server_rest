@@ -1,12 +1,18 @@
 import 'tshock_server_rest.dart';
 import 'tshock_server_rest_bans.dart';
+import 'tshock_server_rest_groups.dart';
+import 'tshock_server_rest_players.dart';
 import 'tshock_server_rest_users.dart';
+import 'tshock_server_rest_world.dart';
 
 class TShockServerRESTServer {
   TShockServerRESTServer._();
   static final TShockServerRESTServer instance = TShockServerRESTServer._();
   static TShockServerRESTUsers _users = TShockServerRESTUsers.instance;
   static TShockServerRESTBans _bans = TShockServerRESTBans.instance;
+  static TShockServerRESTPlayers _players = TShockServerRESTPlayers.instance;
+  static TShockServerRESTWorld _world = TShockServerRESTWorld.instance;
+  static TShockServerRESTGroups _groups = TShockServerRESTGroups.instance;
 
   static String _ip = '127.0.0.1';
   static int _port = 7878;
@@ -29,6 +35,9 @@ class TShockServerRESTServer {
 
   TShockServerRESTUsers get users => _users;
   TShockServerRESTBans get bans => _bans;
+  TShockServerRESTPlayers get players => _players;
+  TShockServerRESTWorld get world => _world;
+  TShockServerRESTGroups get groups => _groups;
 
   Future<String> createToken(String username, String password) async {
     final url = '$_baseUrl/v2/token/create';

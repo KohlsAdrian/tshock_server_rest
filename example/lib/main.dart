@@ -58,6 +58,50 @@ void main() async {
   final bannedName = await tssr.bans.getBannedUserByName('dart');
   print(bannedName.toMap());
 
+  final unban = await tssr.bans.removeBan('dart');
+  print(unban.toString());
+
+  final world = await tssr.world.info();
+  print(world.time);
+
+  final meteor = await tssr.world.spawnMeteor();
+  print(meteor.toString());
+
+  final bloodmoonTrue = await tssr.world.setBloodMoon(true);
+  print(bloodmoonTrue.toString());
+
+  final bloodmoonFalse = await tssr.world.setBloodMoon(false);
+  print(bloodmoonFalse.toString());
+
+  final save = await tssr.world.save();
+  print(save.toString());
+
+  final autosave = await tssr.world.setAutoSave(true);
+  print(autosave.toString());
+
+  final butcher = await tssr.world.butcher();
+  print(butcher.toString());
+
+  final createGroup =
+      await tssr.groups.create('dart', 'default', [], 255, 255, 255);
+  print(createGroup.toString());
+
+  final deleteGroup = await tssr.groups.delete('dart');
+  print(deleteGroup.toString());
+
+  final createGroup2 =
+      await tssr.groups.create('dart', 'default', [], 255, 255, 255);
+  print(createGroup2.toString());
+
+  final groups = await tssr.groups.list();
+  groups.forEach((g) => print(g.toMap()));
+
+  final group = await tssr.groups.read(groups.first.name);
+  print(group.toMap());
+
+  final updateGroup = await tssr.groups.update('dart');
+  print(updateGroup.toString());
+
   //final shutdown = tssr.shutdown(true);
   //print(shutdown);
 }

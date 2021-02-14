@@ -34,7 +34,7 @@ class TShockBannedUser {
     String ip = json['ip'];
     String banningUser = json['banning_user'];
     String date = json['date'];
-    String reason = json['reasong'];
+    String reason = json['reason'];
 
     return TShockBannedUser(name, ip, banningUser, date, reason);
   }
@@ -44,6 +44,6 @@ class TShockBannedUser {
         'ip': ip,
         'banningUser': banningUser,
         'date': date,
-        'reasong': reason,
+        'reason': reason,
       };
 }
