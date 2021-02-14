@@ -9,9 +9,9 @@ class TShockServerRESTGroups {
     String name,
     String parent, [
     List<String> permissions = const [],
-    int chatRrgRED = 255,
-    int chatRrgGREEN = 255,
-    int chatRrgBLUE = 255,
+    int chatRgbRED = 255,
+    int chatRgbGREEN = 255,
+    int chatRgbBLUE = 255,
   ]) async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
@@ -26,7 +26,7 @@ class TShockServerRESTGroups {
     String params = 'group=$name';
     params += '&permissions=$mPermissions';
     params += '&parent=$parent';
-    params += '&chatcolor=$chatRrgRED,$chatRrgGREEN,$chatRrgBLUE';
+    params += '&chatcolor=$chatRgbRED,$chatRgbGREEN,$chatRgbBLUE';
 
     final response = await get('$url&$params');
     if (response.body != null) {
@@ -103,9 +103,9 @@ class TShockServerRESTGroups {
     String name, {
     String parent = 'default',
     List<String> permissions = const [],
-    int chatRrgRED = 255,
-    int chatRrgGREEN = 255,
-    int chatRrgBLUE = 255,
+    int chatRgbRED = 255,
+    int chatRgbGREEN = 255,
+    int chatRgbBLUE = 255,
   }) async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
@@ -118,7 +118,7 @@ class TShockServerRESTGroups {
     });
 
     String params =
-        'group=$name&parent=$parent&permissions=$mPermissions&chatcolor=$chatRrgRED,$chatRrgGREEN,$chatRrgBLUE';
+        'group=$name&parent=$parent&permissions=$mPermissions&chatcolor=$chatRgbRED,$chatRgbGREEN,$chatRgbBLUE';
 
     final response = await get('$url&$params');
     if (response.body != null) {
