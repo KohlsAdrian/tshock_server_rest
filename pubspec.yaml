@@ -1,12 +1,11 @@
 name: tshock_server_rest
 description: Dart wrapper for TShock REST APIs for Terraria Servers.
 version: 0.1.0
-author: Adrian Kohls (647)
-homepage: https://adriankohls.app
+homepage: https://github.com/KohlsAdrian/tshock_server_rest
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
   #flutter: ">=1.17.0"
 
 dependencies:
-  http:
+  http: ^0.12.2

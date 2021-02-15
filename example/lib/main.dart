@@ -99,7 +99,12 @@ void main() async {
   final group = await tssr.groups.read(groups.first.name);
   print(group.toMap());
 
-  final updateGroup = await tssr.groups.update('dart');
+  final updateGroup = await tssr.groups.update(
+    'guest',
+    chatRgbBLUE: 1,
+    chatRgbGREEN: 2,
+    chatRgbRED: 3,
+  );
   print(updateGroup.toString());
 
   //final shutdown = tssr.shutdown(true);
