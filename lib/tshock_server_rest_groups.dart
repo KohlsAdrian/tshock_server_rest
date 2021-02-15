@@ -109,7 +109,7 @@ class TShockServerRESTGroups {
   }) async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
-    final url = '$_baseUrl/v2/groups/read?token=$_token';
+    final url = '$_baseUrl/v2/groups/update?token=$_token';
 
     String mPermissions = '';
     permissions.forEach((p) {
