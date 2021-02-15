@@ -5,7 +5,7 @@ class TShockServerRESTBans {
   TShockServerRESTBans._();
   static final TShockServerRESTBans instance = TShockServerRESTBans._();
 
-  Future<List<TShockUser>> getAllBans() async {
+  Future<List<TShockBannedUser>> getAllBans() async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
     final url = '$_baseUrl/v2/bans/list?token=$_token';
@@ -15,7 +15,7 @@ class TShockServerRESTBans {
       Map<String, dynamic> map = json.decode(jsonString);
       if (map['status'] == '200') {
         final users = map['bans'] as Iterable;
-        return users.map((e) => TShockUser.fromJson(e)).toList();
+        return users.map((e) => TShockBannedUser.fromJson(e)).toList();
       }
     }
     return null;
