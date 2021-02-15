@@ -22,7 +22,7 @@ class TShockServerRESTUsers {
     return null;
   }
 
-  Future<List<String>> getActiveUsers() async {
+  Future<String> getActiveUsers() async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
     final url = '$_baseUrl/v2/users/activelist?token=$_token';
@@ -32,8 +32,7 @@ class TShockServerRESTUsers {
       Map<String, dynamic> map = json.decode(jsonString);
       if (map['status'] == '200') {
         String activeusers = map['activeusers'];
-        final users = activeusers.split(' ');
-        return users;
+        return activeusers;
       }
     }
     return null;
@@ -181,5 +180,4 @@ class TShockServerRESTUsers {
     }
     return null;
   }
-
 }

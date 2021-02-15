@@ -29,7 +29,7 @@ void main() async {
   users.forEach((element) => print(element.toMap()));
 
   final activeusers = await tssr.users.getActiveUsers();
-  activeusers.map((e) => print(e));
+  print(activeusers);
 
   final destroyResult = await tssr.users.destroyUserByName('dart');
   print(destroyResult);
