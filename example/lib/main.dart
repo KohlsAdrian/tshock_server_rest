@@ -3,8 +3,7 @@ import 'package:tshock_server_rest/tshock_server_rest.dart';
 import 'package:tshock_server_rest/tshock_server_rest_server.dart';
 
 TShockServerRESTServer tssr = TShockServerRESTServer.instance;
-String token =
-    'E7C12C616AFAD9EC2658F86CB86A151C0B058C48E8DE411D212CEE61E3D82143';
+String token = '';
 void main() async {
   tssr.init(
     '127.0.0.1',
