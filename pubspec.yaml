@@ -1,6 +1,6 @@
 name: tshock_server_rest
 description: Dart wrapper for TShock REST APIs for Terraria Servers.
-version: 0.1.0
+version: 0.1.0+1
 homepage: https://github.com/KohlsAdrian/tshock_server_rest
 
 environment:
