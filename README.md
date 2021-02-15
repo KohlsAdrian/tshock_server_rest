@@ -1,14 +1,42 @@
 # tshock_server_rest
 
-A new Flutter package project.
+A Dart wrapper for TShock Terraria Servers REST APIs
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+    TShockServerRESTServer tssr = TShockServerRESTServer.instance;
+    
+    tssr.init(
+      '127.0.0.1',      // server address
+      7878,             // server rest api port
+      token,            // token created from reast api
+      isHttps: false,   // if the address has certificate protocol
+    );
+    
+    /// Checks server status
+    TShockServerStatus status = await tssr.status();
+    
+    /// retrive all users from the server
+    final users = await tssr.users.getAllUsers();
+    
+## Structure
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+TShockServerRESTServer has contexts of functionalities
+
+  * Users
+  
+  * Bans
+  
+  * Players
+  
+  * World
+  
+  * Groups
+  
+Each context has it own REST API functions
+
+  TShockServerStatus.instance.<context>.MyFunctions();
+  
+Geral context is just
+
+  TShockServerStatus.instance.MyFunctions();
