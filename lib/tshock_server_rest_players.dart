@@ -9,7 +9,7 @@ class TShockServerRESTPlayers {
   Future<Map<String, dynamic>> kick(String name, {String reason = ''}) async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
-    final url = '$_baseUrl/v2/players/update?token=$_token';
+    final url = '$_baseUrl/v2/players/kick?token=$_token';
 
     String params = 'player=$name&reason=$reason';
 
