@@ -9,7 +9,7 @@ class TShockServerRESTPlayers {
   Future<Map<String, dynamic>> kick(String name, {String reason = ''}) async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
-    final url = '$_baseUrl/v2/users/update?token=$_token';
+    final url = '$_baseUrl/v2/players/update?token=$_token';
 
     String params = 'player=$name&reason=$reason';
 
@@ -29,7 +29,7 @@ class TShockServerRESTPlayers {
   Future<Map<String, dynamic>> ban(String name, {String reason = ''}) async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
-    final url = '$_baseUrl/v2/users/ban?token=$_token';
+    final url = '$_baseUrl/v2/players/ban?token=$_token';
 
     String params = 'player=$name&reason=$reason';
 
@@ -49,7 +49,7 @@ class TShockServerRESTPlayers {
   Future<Map<String, dynamic>> kill(String name) async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
-    final url = '$_baseUrl/v2/users/kill?token=$_token';
+    final url = '$_baseUrl/v2/players/kill?token=$_token';
 
     String params = 'player=$name';
 
@@ -69,7 +69,7 @@ class TShockServerRESTPlayers {
   Future<Map<String, dynamic>> mute(String name, {String reason = ''}) async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
-    final url = '$_baseUrl/v2/users/mute?token=$_token';
+    final url = '$_baseUrl/v2/players/mute?token=$_token';
 
     String params = 'player=$name&reason=$reason';
 
@@ -89,7 +89,7 @@ class TShockServerRESTPlayers {
   Future<Map<String, dynamic>> unmute(String name, {String reason = ''}) async {
     final _baseUrl = TShockServerRESTServer.instance.baseUrl;
     final _token = TShockServerRESTServer.instance.token;
-    final url = '$_baseUrl/v2/users/unmute?token=$_token';
+    final url = '$_baseUrl/v2/players/unmute?token=$_token';
 
     String params = 'player=$name&reason=$reason';
 
