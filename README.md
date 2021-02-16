@@ -35,7 +35,7 @@ TShockServerRESTServer has contexts of functionalities
   
 Each context has it own REST API functions
 
-  TShockServerStatus.instance.<context>.MyFunctions();
+  TShockServerStatus.instance.(context).MyFunctions();
   
 Geral context is just
 
