@@ -23,6 +23,7 @@ A Dart wrapper for TShock Terraria Servers REST APIs
    ![](https://github.com/KohlsAdrian/tshock_server_rest_client/blob/master/sss/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202021-02-17%20at%2014.42.00.png)
     
 </details>
+
 ## Getting Started
 
     TShockServerRESTServer tssr = TShockServerRESTServer.instance;
