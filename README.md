@@ -5,9 +5,9 @@ A Dart wrapper for TShock Terraria Servers REST APIs
 <details>
     <summary>App Client</summary>
 
-![](https://github.com/KohlsAdrian/tshock_server_rest_client/raw/master/sss/tshock_server_header.png)
+[![](https://github.com/KohlsAdrian/tshock_server_rest_client/raw/master/sss/tshock_server_header.png)](https://github.com/KohlsAdrian/tshock_server_rest_client)
  
-[Google Play App Client](https://github.com/KohlsAdrian/tshock_server_rest_client/tags)
+[Google Play App Client](https://play.google.com/store/apps/details?id=br.com.adriankohls.tshock_server_rest_client)
 
 </details>
 
